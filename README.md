@@ -8,7 +8,7 @@ A simple memory card game
 - [x] React Hooks
 - [x] Node.js API
 - [x] Heroku Deployment
-- [x] CD/CI Travis integration
+- [x] CI/CD Travis integration
 
 ## Getting started:
 

@@ -20,24 +20,7 @@ app.use(
 
 app.use(express.static(path.join(__dirname, "../client/build")));
 
-app.post("/api/numbers", (req, res, next) => {
-  console.log(req.body);
-  const { number } = req.body;
-  console.log("NUMBER: ", number);
-
-  let numbers = [];
-
-  for (let i = 0; i < number; i++) {
-    let newNumber = Math.floor(Math.random() * 100);
-    if (!numbers.includes(newNumber)) {
-      numbers.push(newNumber);
-    } else {
-      i--;
-    }
-  }
-  console.log("NUMBERS: ", numbers);
-  res.json({ numbers });
-});
+app.use("/api", require("./routes/numbers"));
 
 app.use("/api/*", (req, res, next) => {
   let err = new Error("Not Found");

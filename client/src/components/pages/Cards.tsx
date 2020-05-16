@@ -26,9 +26,10 @@ const Cards: React.SFC<CardsProps> = ({ amountOfCards }) => {
     numbers as any,
     userChoice.map((one: any) => one.num),
   );
+  console.log(game);
 
   const choices = () => {
-    if (!game) {
+    if (userChoice.length && !game) {
       setEndGame(true);
       setStatus("lost");
     }
