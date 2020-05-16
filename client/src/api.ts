@@ -9,7 +9,6 @@ export default {
   service: service,
 
   async getNumbers(data: any) {
-    const numbers = await service.post(`/numbers`, data);
-    return numbers;
+    return await service.post(`/numbers`, data);
   },
 };

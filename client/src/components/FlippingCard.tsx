@@ -6,14 +6,12 @@ export interface FlippingCardProps {
   allFlipped: boolean;
   num: Number;
   setUserChoice: any;
-  userChoice: any;
 }
 
 const FlippingCard: React.SFC<FlippingCardProps> = ({
   allFlipped,
   num,
   setUserChoice,
-  userChoice,
 }) => {
   const [isFlipped, setIsFlipped] = useState(true);
 

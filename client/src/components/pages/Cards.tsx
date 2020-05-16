@@ -17,7 +17,7 @@ export interface CardsProps {
 
 const Cards: React.SFC<CardsProps> = ({ amountOfCards }) => {
   const [isFlipped, setIsFlipped] = useState(false);
-  const { numbers, isLoading } = useCards(amountOfCards);
+  const { numbers } = useCards(amountOfCards);
   const [userChoice, setUserChoice] = useState(Array);
   const [endGame, setEndGame] = useState(false);
   const [status, setStatus] = useState("");
@@ -26,7 +26,6 @@ const Cards: React.SFC<CardsProps> = ({ amountOfCards }) => {
     numbers as any,
     userChoice.map((one: any) => one.num),
   );
-  console.log(game);
 
   const choices = () => {
     if (userChoice.length && !game) {
@@ -62,7 +61,6 @@ const Cards: React.SFC<CardsProps> = ({ amountOfCards }) => {
                     allFlipped={isFlipped}
                     num={number}
                     setUserChoice={setUserChoice}
-                    userChoice={userChoice}
                   />
                 </Col>
               ))}
@@ -79,7 +77,7 @@ const Cards: React.SFC<CardsProps> = ({ amountOfCards }) => {
           <Row>
             {userChoice &&
               userChoice.map((one: any, i: number) => (
-                <Col key={`${i}`} xs={4}>
+                <Col className="mt-3" key={`${i}`} xs={4}>
                   <span className="p-2 m-2" style={{ color: "white" }}>
                     {`${i + 1} - You flipped ${one.num}  
                     `}

@@ -6,10 +6,9 @@ export const compare = (numberArr: [], orderArr: any): Boolean => {
     return result;
   }
 
-  const sorted = [...numberArr].sort();
-
-  console.log(sorted);
-  console.log(orderArr);
+  const sorted = [...numberArr].sort(function (a, b) {
+    return a - b;
+  });
 
   for (let i = 0; i <= orderArr.length - 1; i++) {
     result = sorted[i] === orderArr[i] ? true : false;

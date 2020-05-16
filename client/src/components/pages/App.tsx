@@ -22,50 +22,35 @@ const App = () => {
           <Row className="mt-5">
             <Col xs={4}>
               <Card
-                // inverse
-                // style={{ backgroundColor: "#333", borderColor: "#333" }}
+                onClick={(e: any) => {
+                  setNumberOfCards(e.currentTarget.childNodes[0].innerText);
+                  setShowCards(!showCards);
+                }}
                 className=" highlightOnHover m-2 p-4 text-center"
               >
-                <h3
-                  onClick={(e: any) => {
-                    setNumberOfCards(e.target.innerHTML);
-                    setShowCards(!showCards);
-                  }}
-                >
-                  4
-                </h3>
+                <h3>4</h3>
               </Card>
             </Col>
             <Col xs={4}>
               <Card
-                // inverse
-                // style={{ backgroundColor: "#333", borderColor: "#333" }}
+                onClick={(e: any) => {
+                  setNumberOfCards(e.currentTarget.childNodes[0].innerText);
+                  setShowCards(!showCards);
+                }}
                 className=" highlightOnHover m-2 p-4 text-center"
               >
-                <h3
-                  onClick={(e: any) => {
-                    setNumberOfCards(e.target.innerHTML);
-                    setShowCards(!showCards);
-                  }}
-                >
-                  8
-                </h3>
+                <h3>8</h3>
               </Card>
             </Col>
             <Col xs={4}>
               <Card
-                // inverse
-                // style={{ backgroundColor: "#333", borderColor: "#333" }}
+                onClick={(e: any) => {
+                  setNumberOfCards(e.currentTarget.childNodes[0].innerText);
+                  setShowCards(!showCards);
+                }}
                 className=" highlightOnHover m-2 p-4 text-center"
               >
-                <h3
-                  onClick={(e: any) => {
-                    setNumberOfCards(e.target.innerHTML);
-                    setShowCards(!showCards);
-                  }}
-                >
-                  12
-                </h3>
+                <h3>12</h3>
               </Card>
             </Col>
           </Row>
