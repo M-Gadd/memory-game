@@ -28,7 +28,7 @@ const FlippingCard: React.SFC<FlippingCardProps> = ({
   return (
     <>
       <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-        <Card className=" highlightOnHover m-2 p-4 text-center">
+        <Card className=" m-2 p-4 text-center">
           <h1>{num}</h1>
         </Card>
 
